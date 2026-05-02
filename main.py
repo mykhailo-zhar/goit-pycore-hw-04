@@ -1,5 +1,11 @@
+from src import salary_demo
+
+
 def main():
-    print("Hello from goit-pycore-hw-04!")
+    print("Task 1:")
+
+    salary_demo()
+    print("\nTask 2:")
 
 
 if __name__ == "__main__":

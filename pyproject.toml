@@ -20,6 +20,7 @@ dependencies = [
     "pluggy==1.6.0",
     "pygments==2.20.0",
     "pytest==9.0.3",
+    "pytest-cov>=7.1.0",
     "requests==2.33.1",
     "roman-numerals==4.1.0",
     "snowballstemmer==3.0.1",
