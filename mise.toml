@@ -53,7 +53,7 @@ echo "Virtual Environment: $VIRTUAL_ENV"
 [tasks.generate-docs]
 alias = "gd"
 description = "Generate documentation"
-run = "sphinx-apidoc -o docs/source src/ tests/"
+run = "sphinx-apidoc -o docs/source src/ && sphinx-apidoc -o docs/source tests/"
 
 [tasks.build-docs]
 alias = "bd"
