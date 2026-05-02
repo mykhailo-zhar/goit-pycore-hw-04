@@ -226,6 +226,7 @@ dependencies = [
     { name = "pygments" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "pytest-sphinx" },
     { name = "requests" },
     { name = "roman-numerals" },
     { name = "snowballstemmer" },
@@ -258,6 +259,7 @@ requires-dist = [
     { name = "pygments", specifier = "==2.20.0" },
     { name = "pytest", specifier = "==9.0.3" },
     { name = "pytest-cov", specifier = ">=7.1.0" },
+    { name = "pytest-sphinx", specifier = ">=0.7.1" },
     { name = "requests", specifier = "==2.33.1" },
     { name = "roman-numerals", specifier = "==4.1.0" },
     { name = "snowballstemmer", specifier = "==3.0.1" },
@@ -437,6 +439,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b1/51/a849f96e117386044471c8ec2bd6cfebacda285da9525c9106aeb28da671/pytest_cov-7.1.0.tar.gz", hash = "sha256:30674f2b5f6351aa09702a9c8c364f6a01c27aae0c1366ae8016160d1efc56b2", size = 55592, upload-time = "2026-03-21T20:11:16.284Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/9d/7a/d968e294073affff457b041c2be9868a40c1c71f4a35fcc1e45e5493067b/pytest_cov-7.1.0-py3-none-any.whl", hash = "sha256:a0461110b7865f9a271aa1b51e516c9a95de9d696734a2f71e3e78f46e1d4678", size = 22876, upload-time = "2026-03-21T20:11:14.438Z" },
+]
+
+[[package]]
+name = "pytest-sphinx"
+version = "0.7.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytest" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6c/81/3c7e79f46228bbabdc836b3d2ef4adaa32559501055fdb02d40e4a6e7452/pytest_sphinx-0.7.1.tar.gz", hash = "sha256:bdf45d96458e6aa1f3618c4845e60924eaa91244247c527eb88f58d6685dece6", size = 13940, upload-time = "2026-01-21T19:08:28.655Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/ee/fc942ac27ad00ac71a5f5b1c8929bd49ff632d2c3dd30f07b552280bd4c8/pytest_sphinx-0.7.1-py3-none-any.whl", hash = "sha256:fa943bb22c15569db02367b5b2b13ef3fbb9e534931ec193d480c05d956979fb", size = 10066, upload-time = "2026-01-21T19:08:26.612Z" },
 ]
 
 [[package]]

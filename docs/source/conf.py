@@ -22,7 +22,9 @@ extensions = []
 templates_path = ["_templates"]
 exclude_patterns = []
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+_repo_root = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(_repo_root))
+
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -34,4 +36,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    "sphinx.ext.doctest",
 ]
+
+pytest_plugins = ("sphinx.testing.fixtures",)

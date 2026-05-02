@@ -12,5 +12,10 @@ documentation for details.
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
+
+   modules
+   src
+   src.scripts
+   tests
