@@ -6,7 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import sys
 from os import environ as os_environ
+from pathlib import Path
 
 project = os_environ.get("PROJECT_NAME", "Sample Project")
 author = os_environ.get("AUTHOR", "Sample Author")
@@ -20,6 +22,7 @@ extensions = []
 templates_path = ["_templates"]
 exclude_patterns = []
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -27,4 +30,8 @@ exclude_patterns = []
 html_theme = "alabaster"
 html_static_path = ["_static"]
 
-extensions = ["sphinx.ext.autodoc"]
+extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+]
