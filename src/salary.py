@@ -1,4 +1,4 @@
-import re
+from src.validations import validate_name, validate_positive_integer
 
 
 def validate_line(line: str) -> tuple[str, int]:
@@ -15,13 +15,11 @@ def validate_line(line: str) -> tuple[str, int]:
     Returns:
         tuple[str, int]: A tuple containing the name and salary.
     """
-    name, salary = line.split(",")
-    # Checks whether the name consists of letters, spaces and digits
-    if not re.match(r"^[\w\s0-9]+$", name):
-        raise ValueError(f"Invalid name: {name}")
+    name, salary = line.strip().split(",")
 
-    # Checks whether the salary is a positive integer
-    if not re.match(r"^\d+$", salary):
+    if not validate_name(name):
+        raise ValueError(f"Invalid name: {name}")
+    if not validate_positive_integer(salary):
         raise ValueError(f"Invalid salary: {salary}")
 
     return name, int(salary)

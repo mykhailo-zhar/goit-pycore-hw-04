@@ -1,39 +1,7 @@
-import os
-import stat
-import tempfile
-from pathlib import Path
-
 import pytest
 
 from src.salary import total_salary
-
-
-@pytest.fixture
-def writeonly_file():
-    """
-    Create a write-only file for testing.
-
-    Yields:
-        str: The path to the write-only file.
-    """
-    with tempfile.NamedTemporaryFile(mode="w", delete=False) as file:
-        file.write("Alex Korp,3000\nNikita Borisenko,2000\nSitarama Raju,1000")
-    os.chmod(file.name, stat.S_IWRITE)
-    yield file.name
-    os.unlink(file.name)
-
-
-def resolve_path(path: str) -> str:
-    """
-    Resolve the path to the data file.
-
-    Args:
-        path (str): The path to the data file.
-
-    Returns:
-        str: The resolved path to the data file.
-    """
-    return str(Path(__file__).resolve().parent / "data" / path)
+from tests.helpers import resolve_path
 
 
 def get_total_salary(path: str) -> tuple[int, int]:
